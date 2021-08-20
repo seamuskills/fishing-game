@@ -12,6 +12,8 @@ function setup(){ //on setup
 	resizeCanvas(innerWidth,innerHeight) //resizecanvas
 	fisher = new Fisher(width/2,height/2+16) //the player
 	textAlign(CENTER,CENTER) //text alignment
+	scale = (height/32)
+	textSize(24*(scale/16))
 }
 
 function draw(){ //loop

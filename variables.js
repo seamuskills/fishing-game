@@ -9,12 +9,13 @@ let ticks = 0 //ticks
 let spawnDelay = 100 //delay till fish spawn
 let score = 0 //the score the player has
 let grassText = "" //the text that displays on grass
-let grassTextReset = 0 //how long untill said text resets
+let grassTextReset = 0 //how long until said text resets
 let bobber //the bobber for the fisher to throw
 let buttons = []
 let loop = "menu"
 let timeleft = 0
 let timed = false
+let scale = 0
 
 let highscore = window.localStorage.getItem("highscore")
 if (highscore == null) {highscore = 0}

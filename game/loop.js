@@ -1,7 +1,7 @@
 function gameLoop(){
 	if (ticks == 0){
 		buttons = []
-		new Button(16,height-textSize()-16,"<")
+		new Button(scale,height-textSize()-scale/2,"<")
 	}
 	if (timed){
 		timeleft -= deltaTime
@@ -51,9 +51,9 @@ function gameLoop(){
 	}
 	fill(0x0) //fill with black
 	if (!timed){
-		text(`score:${Math.round(score)}`,width/2,16) //draw score text
+		text(`score:${Math.round(score)}`,width/2,textSize()) //draw score text
 	}else{
-		text(`score:${Math.round(score)} § time: ${round(timeleft/1000)}`, width/2,16)
+		text(`score:${Math.round(score)} § time: ${round(timeleft/1000)}`, width/2,textSize())
 	}
 	text(grassText,width/2,height*(0.75+(0.25/2))) //draw grass text
 	for (button of buttons){

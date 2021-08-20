@@ -6,7 +6,7 @@ class Button{
 	}
 	update(){
 		push()
-		textSize(50)
+		textSize(50*(scale/16))
 		fill(0x33)
 		if (mouseX > this.pos.x-textWidth(this.text)/2 && mouseX < this.pos.x+textWidth(this.text)/2 && mouseY > this.pos.y-(textSize()/2) && mouseY < this.pos.y+(textSize()/2)){
 			fill(0x44)

@@ -8,7 +8,7 @@ class Fisher{
 		let delta = this.pos.copy().sub(createVector(mouseX,mouseY)) //get different between mouse and me
 		this.dir = atan2(delta.y,delta.x) //set direction to face mouse using delta
 		if (click){ //if clicking
-			this.power += 2 //add power
+			this.power += scale/8 //add power
 		}else{// otherwise
 			if (this.power > 10){ //if releasing charge
 				bobber = new Bobber(this.dir,this.power) //throw bobber
@@ -23,7 +23,7 @@ class Fisher{
 		rotate(this.dir) //rotate to face mouse
 
 		fill(0xE1,0xCE,0x77) //fill skin color
-		square(0,0,32) //draw square
+		square(0,0,scale) //draw square
 		stroke(0xff,0x0,0x0) //stroke red
 		line(0,0,-this.power/2,0) //draw fishing line aiming tool
 		pop() //reset settings

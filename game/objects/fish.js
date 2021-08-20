@@ -2,7 +2,7 @@ class Fish{ //fish that swim around
 	constructor(x,y,direction,speed){
 		this.pos = createVector(x,y) //where it is
 		this.dir = direction //if its going left or right
-		this.speed = speed //how fast its going
+		this.speed = speed*(scale/16) //how fast its going
 		this.color = fishColors[Object.keys(fishColors)[Math.round(Math.random()*(Object.keys(fishColors).length-1))]] //what color is it
 		fishList.push(this) //put self in list of fish
 	}
@@ -14,6 +14,6 @@ class Fish{ //fish that swim around
 	}
 	show(){
 		fill(this.color[0],this.color[1],this.color[2]) //fill fish color
-		circle(this.pos.x,this.pos.y,16) //draw self
+		circle(this.pos.x,this.pos.y,scale) //draw self
 	}
 }
