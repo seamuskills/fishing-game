@@ -16,7 +16,7 @@ class Bobber{ //bobber that player shoots to catch fish
 				for (fish of fishList){ //loop through fish
 					if (fish.pos.dist(this.pos) < scale){ //if on a fish
 						fish.speed /= scale/16
-						score += fish.speed*fisher.pos.dist(fish.pos) //incerment score by fishSpeed * fishDistanceToFish
+						score += fish.speed*fisher.pos.dist(fish.pos)*(scale/16) //incerment score by fishSpeed * fishDistanceToFish
 						grassTextReset = 5000 //how much time until grass text resets
 						grassText += `\nfish Caught: ${fish.speed.toFixed(2)} speed * ${fisher.pos.dist(fish.pos).toFixed(2)} distance for a total of ${(fish.speed*fisher.pos.dist(fish.pos)).toFixed(2)}` //display the score recieved in grass text
 						fishList.splice(fishList.indexOf(fish),1) //get rid of fish
