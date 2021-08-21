@@ -7,6 +7,7 @@ function menuLoop(){
 		new Button(width/2,height/2,"infinite")
 		new Button(width/2,height/2-(56*scale/16),"score attack")
 		new Button(width/2,height/2+(56*scale/16),"clear high score")
+		new Button(width/2,height/2+(112*scale/16),"help")
 	}
 	for (button of buttons){
 		button.update()

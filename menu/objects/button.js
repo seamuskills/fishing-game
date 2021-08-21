@@ -30,6 +30,10 @@ class Button{
 					case "<":
 						quitToMenu()
 					break
+					case "help":
+						buttons = []
+						loop = "help"
+					break
 				}
 			}
 		}

@@ -24,5 +24,8 @@ function draw(){ //loop
 		case "game":
 			gameLoop()
 		break
+		case "help":
+			helpLoop()
+		break
 	}
 }
