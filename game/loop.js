@@ -3,6 +3,7 @@ function gameLoop(){
 		buttons = []
 		new Button(scale,height-textSize()-scale/2,"<")
 	}
+	ticks++ //incerment ticks
 	if (timed){
 		timeleft -= deltaTime
 		if (timeleft < 0){
@@ -13,7 +14,6 @@ function gameLoop(){
 			quitToMenu()
 		}
 	}
-	ticks++ //incerment ticks
 	grassTextReset -= deltaTime //decrease grass text reset time
 	if (grassTextReset < 0){ //reset if its below 0
 		grassText = ""
