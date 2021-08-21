@@ -19,6 +19,7 @@ class Button{
 						loop = "game"
 					break
 					case "infinite":
+						timed = false
 						loop = "game"
 					break
 					case "clear high score":
