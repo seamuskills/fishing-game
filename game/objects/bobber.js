@@ -7,12 +7,14 @@ class Bobber{ //bobber that player shoots to catch fish
 		this.speed.mult(8*(scale/16)) //make the speed alot faster
 		this.life = 600 //how long it will last after its landed at the target
 		this.active = true //if its active
+		this.moving = true
 	}
 	update(){
 		if (this.pos.copy().dist(this.target) > scale){ //if not at target
 			this.pos.sub(this.speed) //move
 		}else{ //otherwise
 			if (this.life == 600){ //first frame of not moving
+				this.moving = false
 				for (fish of fishList){ //loop through fish
 					if (fish.pos.dist(this.pos) < scale){ //if on a fish
 						fish.speed /= scale/16
@@ -31,6 +33,6 @@ class Bobber{ //bobber that player shoots to catch fish
 	}
 	show(){
 		fill(0xee,128) //fill transparent white
-		circle(this.pos.x,this.pos.y,scale) //draw the bobber
+		circle(this.pos.x,this.pos.y,(scale/2)*(this.moving+1)) //draw the bobber
 	}
 }

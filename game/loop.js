@@ -55,7 +55,9 @@ function gameLoop(){
 	}else{
 		text(`score:${Math.round(score)} § time: ${round(timeleft/1000)}`, width/2,textSize())
 	}
+	textSize(12*(scale/16))
 	text(grassText,width/2,height*(0.75+(0.25/2))) //draw grass text
+	textSize(24*(scale/16))
 	for (button of buttons){
 		button.update()
 	}
